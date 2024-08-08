@@ -35,6 +35,10 @@ const Main = () => {
     setFilteredTransactionsList(filteredList);
   }
 
+  function handleAdd() {
+    console.log("add transaction");
+  }
+
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -44,7 +48,7 @@ const Main = () => {
       <h2>Transaction List</h2>
       <div className="d-flex justify-content-between">
         <SearchTransactionForm onSearch={handleSearch} />
-        <AddTransactionForm />
+        <AddTransactionForm onAdd={handleAdd} />
       </div>
       <TransactionList list={filteredTransactionList} />
     </main>

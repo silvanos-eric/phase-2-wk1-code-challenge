@@ -1,5 +1,14 @@
 // React Bootstrap components
-export { Container, Row, Col, Table, Button, Form } from "react-bootstrap";
+export {
+  Container,
+  Row,
+  Col,
+  Table,
+  Button,
+  Form,
+  Modal,
+  FormGroup,
+} from "react-bootstrap";
 
 // Custom Components
 export { Header } from "./Header";
