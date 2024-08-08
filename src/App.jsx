@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { Header, Main, Footer } from "./components";
+
 import { fetchTransactionList } from "./apis/fetchTransactionList";
 
 import "./App.css";
@@ -12,7 +14,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const loadData = async () => {
+    const loadList = async () => {
       try {
         const list = await fetchTransactionList(API_URL);
         setTransactionList(list);
@@ -23,10 +25,16 @@ function App() {
       }
     };
 
-    loadData();
+    loadList();
   }, []);
 
-  return <></>;
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
