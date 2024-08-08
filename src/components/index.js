@@ -1,5 +1,5 @@
 // React Bootstrap components
-export { Container } from "react-bootstrap";
+export { Container, Row, Col } from "react-bootstrap";
 
 // Custom Components
 export { Header } from "./Header";

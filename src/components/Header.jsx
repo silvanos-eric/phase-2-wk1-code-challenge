@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <>
-      <p>Header</p>
-    </>
+    <header>
+      <h1 className="text-center">Bank Of Flatiron</h1>
+    </header>
   );
 };
 

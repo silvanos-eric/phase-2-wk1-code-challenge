@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Header, Main, Footer, Container } from "./components";
+import { Header, Main, Footer, Container, Row, Col } from "./components";
 
 import { fetchTransactionList } from "./apis/fetchTransactionList";
 
@@ -29,10 +29,22 @@ function App() {
   }, []);
 
   return (
-    <Container clssName="p-3">
-      <Header />
-      <Main />
-      <Footer />
+    <Container className="p-3 h-100 d-flex flex-column">
+      <Row>
+        <Col>
+          <Header />
+        </Col>
+      </Row>
+      <Row className="flex-grow-1">
+        <Col>
+          <Main />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Footer />
+        </Col>
+      </Row>
     </Container>
   );
 }

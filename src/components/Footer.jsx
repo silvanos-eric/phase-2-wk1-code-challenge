@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <>
-      <p>Footer</p>
-    </>
+    <footer>
+      <p className="text-center">© 2024 Bank of Flatiron.</p>
+    </footer>
   );
 };
 

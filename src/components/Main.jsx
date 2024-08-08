@@ -1,9 +1,5 @@
 const Main = () => {
-  return (
-    <>
-      <p>Main</p>
-    </>
-  );
+  return <main>Main</main>;
 };
 
 export { Main };
