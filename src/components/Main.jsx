@@ -39,7 +39,7 @@ const Main = () => {
     <main className="text-center">
       <h2>Transaction List</h2>
       <div className="d-flex justify-content-between">
-        <SearchTransactionForm handleSearch={handleSearch} />
+        <SearchTransactionForm onSearch={handleSearch} />
         <AddTransactionForm />
       </div>
       <TransactionList list={filteredTransactionList} />

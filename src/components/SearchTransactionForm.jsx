@@ -2,25 +2,24 @@ import { useState } from "react";
 
 import { Form, Button } from ".";
 
-const SearchTransactionForm = ({ handleSearch }) => {
+const SearchTransactionForm = ({ onSearch }) => {
   // State to hold values
-  const [formData, setFormData] = useState({
-    searchText: "",
-  });
+  const [searchText, setSearchText] = useState("");
 
   // Handle form input changes
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setSearchText(event.target.value);
   };
 
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleSearch(formData.searchText);
+    onSearch(searchText);
+  };
+
+  const handleClear = () => {
+    setSearchText("");
+    onSearch("");
   };
 
   return (
@@ -29,10 +28,13 @@ const SearchTransactionForm = ({ handleSearch }) => {
         placeholder="transaction description"
         type="text"
         name="searchText"
-        value={formData.searchText}
+        value={searchText}
         onChange={handleChange}
       ></Form.Control>
       <Button type="submit">Search</Button>
+      <Button type="button" variant="danger" onClick={handleClear}>
+        Clear
+      </Button>
     </Form>
   );
 };
