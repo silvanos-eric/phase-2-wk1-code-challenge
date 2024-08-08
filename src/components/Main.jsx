@@ -35,8 +35,8 @@ const Main = () => {
     setFilteredTransactionsList(filteredList);
   }
 
-  function handleAdd() {
-    console.log("add transaction");
+  function handleAdd(transaction) {
+    console.log(transaction);
   }
 
   if (loading) {
