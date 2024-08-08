@@ -35,6 +35,10 @@ const Main = () => {
     setFilteredTransactionsList(filteredList);
   }
 
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <main className="text-center">
       <h2>Transaction List</h2>
