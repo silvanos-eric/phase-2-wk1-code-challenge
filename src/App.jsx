@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Header, Main, Footer } from "./components";
+import { Header, Main, Footer, Container } from "./components";
 
 import { fetchTransactionList } from "./apis/fetchTransactionList";
 
@@ -29,11 +29,11 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Container clssName="p-3">
       <Header />
       <Main />
       <Footer />
-    </>
+    </Container>
   );
 }
 
