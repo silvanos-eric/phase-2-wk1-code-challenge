@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { fetchTransactionList } from "../apis/fetchTransactionList.js";
+import { fetchTransactionList } from "../apis";
 
 import { TransactionList, SearchTransactionForm, AddTransactionForm } from ".";
 
@@ -10,7 +10,7 @@ const Main = () => {
   const [transactionList, setTransactionList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [filteredTransactionList, setFilteredTransactionsList] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const loadList = async () => {
@@ -28,16 +28,18 @@ const Main = () => {
     loadList();
   }, []);
 
-  function handleSearch(searchText) {
-    const filteredList = transactionList.filter((transaction) =>
-      transaction.description.toLowerCase().includes(searchText.toLowerCase())
-    );
-    setFilteredTransactionsList(filteredList);
-  }
+  const handleSearch = (searchText) => {
+    setSearchQuery(searchText);
+  };
 
-  function handleAdd(transaction) {
-    console.log(transaction);
-  }
+  const handleAdd = (transaction) => {
+    setTransactionList([...transactionList, transaction]);
+  };
+
+  // Filter the transactionList based on the search query
+  const filteredTransactionList = transactionList.filter((transaction) =>
+    transaction.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   if (loading) {
     return <p>Loading...</p>;

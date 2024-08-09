@@ -1,6 +1,9 @@
 import { useState, useRef } from "react";
 
 import { Form, Button, Modal } from ".";
+import { addTransaction } from "../apis";
+
+const API_URL = "http://localhost:3000";
 
 const AddTransactionForm = ({ onAdd }) => {
   const [show, setShow] = useState(false);
@@ -30,9 +33,15 @@ const AddTransactionForm = ({ onAdd }) => {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
+    try {
+      const newTransaction = await addTransaction(API_URL, formData);
+      onAdd(newTransaction);
+      handleClose();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   function submit() {
