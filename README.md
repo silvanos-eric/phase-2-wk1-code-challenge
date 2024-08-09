@@ -77,7 +77,7 @@ The application uses the following scripts:
 
 ## Deployment
 The application has been deployed to the following web address
-- [Live Site](`https://phase-2-wk1-code-challenge-vert.vercel.app/`)
+- [Live Site](https://phase-2-wk1-code-challenge-vert.vercel.app/)
 
 ## License
 
