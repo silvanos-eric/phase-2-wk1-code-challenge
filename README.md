@@ -1,3 +1,19 @@
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Bank of Flatiron](#bank-of-flatiron)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [API](#api)
+  - [Components](#components)
+  - [Dependencies](#dependencies)
+  - [Scripts](#scripts)
+  - [License](#license)
+  - [Authors](#authors)
+  - [Acknowledgments](#acknowledgments)
+
+
 # Bank of Flatiron
 
 This is a simple banking application built with React, Vite, and React Bootstrap.
