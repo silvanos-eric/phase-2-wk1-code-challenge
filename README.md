@@ -9,6 +9,7 @@
   - [Components](#components)
   - [Dependencies](#dependencies)
   - [Scripts](#scripts)
+  - [Deployment](#deployment)
   - [License](#license)
   - [Authors](#authors)
   - [Acknowledgments](#acknowledgments)
@@ -73,6 +74,10 @@ The application uses the following scripts:
 *   `build`: Builds the application for production.
 *   `preview`: Previews the application in the browser.
 *   `server`: Starts the json server.
+
+## Deployment
+The application has been deployed to the following web address
+- [Live Site](`https://phase-2-wk1-code-challenge-vert.vercel.app/`)
 
 ## License
 
