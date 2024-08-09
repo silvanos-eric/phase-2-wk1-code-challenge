@@ -4,8 +4,6 @@ import { fetchTransactionList } from "../apis";
 
 import { TransactionList, SearchTransactionForm, AddTransactionForm } from ".";
 
-const API_URL = "http://localhost:3000";
-
 const Main = () => {
   const [transactionList, setTransactionList] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,9 +13,8 @@ const Main = () => {
   useEffect(() => {
     const loadList = async () => {
       try {
-        const list = await fetchTransactionList(API_URL);
+        const list = await fetchTransactionList();
         setTransactionList(list);
-        setFilteredTransactionsList(list);
       } catch (error) {
         setError(error.message);
       } finally {

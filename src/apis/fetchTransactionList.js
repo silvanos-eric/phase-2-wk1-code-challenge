@@ -1,7 +1,9 @@
-const fetchTransactionList = async (url) => {
+import { API_URL } from "./url";
+
+const fetchTransactionList = async () => {
   try {
     // Make the GET request using fetch
-    const response = await fetch(`${url}/transactions`);
+    const response = await fetch(`${API_URL}/transactions`);
 
     // Check if the response status is OK (status code 200 - 299)
     if (!response.ok) {

@@ -3,8 +3,6 @@ import { useState, useRef } from "react";
 import { Form, Button, Modal } from ".";
 import { addTransaction } from "../apis";
 
-const API_URL = "http://localhost:3000";
-
 const AddTransactionForm = ({ onAdd }) => {
   const [show, setShow] = useState(false);
   const [formData, setFormData] = useState({
@@ -36,7 +34,7 @@ const AddTransactionForm = ({ onAdd }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const newTransaction = await addTransaction(API_URL, formData);
+      const newTransaction = await addTransaction(formData);
       onAdd(newTransaction);
       handleClose();
     } catch (error) {

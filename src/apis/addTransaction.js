@@ -1,7 +1,9 @@
-const addTransaction = async (url, transaction) => {
+import { API_URL } from "./url";
+
+const addTransaction = async (transaction) => {
   try {
     // Make the GET request using fetch
-    const response = await fetch(`${url}/transactions`, {
+    const response = await fetch(`${API_URL}/transactions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
