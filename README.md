@@ -41,7 +41,8 @@ This is a simple banking application built with React, Vite, and React Bootstrap
 
 ## API
 
-The application uses a JSON API to store and retrieve transactions. The API is located at `http://localhost:3000/api/transactions`.
+- The application uses a JSON API to store and retrieve transactions. The API is located at `http://localhost:3000/api/transactions`.
+- In production the application uses `` to store and retrieve data.
 
 ## Components
 
